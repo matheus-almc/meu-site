@@ -1,0 +1,363 @@
+y@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+    --cor1: #2F3D40;
+    --cor2: #455559;
+    --cor3: #000000;
+    --cor4: #ffffff;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Roboto Mono', monospace;
+    background-color: #555555;
+}
+
+/* cabeçalho */
+header{
+    border: solid 3px  black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 6px rgba(0, 0, 0, 0.307);
+}
+
+/* navegação */
+nav{
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* navegação de midia */
+nav > .midia{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 50%;
+
+}
+
+nav > .midia > a {
+    color: white;
+    padding:10px;
+}
+
+nav > .midia > a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 7px 6px rgba(0, 0, 0, 0.338);
+}
+
+/* navegação de site */
+nav > .menu{
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    width: 50%;
+}
+
+nav > .menu > a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    padding: 9px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+nav > .menu > a:hover {
+    background-color: #ffffff;
+    transition: .3s;
+    color: #000000;
+    text-decoration: underline;
+    box-shadow: 0px 0px 7px 6px rgba(0, 0, 0, 0.341);
+}
+
+/* conteudo principal */
+main{
+    margin: auto;
+    max-width: 1700px;
+    border-radius: 20px;
+}
+
+/* sessão1 home */
+section.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    /* indiferentes */
+    height: 100vh;
+}
+
+section.home > h1 {
+    font-size: 1.8em;
+}
+
+
+/* sessão2 about me? */
+section.aboutme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+
+    /* indiferente */
+    background-color: #2c2d31;
+    box-shadow: 0px 0px 8px 8px #0000004b;
+    border: solid 5px rgb(0, 0, 0);
+    border-radius: 5px;
+    max-height: 105vh;
+}
+
+div.minha-foto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* indiferentes */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: solid 8px black;
+    margin-top: 10px ;
+    background-color: #000000;
+    box-shadow: 0px 0px 9px 9px rgba(0, 0, 0, 0.404);
+}
+.foto{
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+}
+
+section.aboutme > h1{
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+section.aboutme > p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+    height: 500px;
+    max-width: 1000px;
+    min-width: 320px;
+    line-height: 29px;
+}
+
+
+/* sessão3 skills */
+section.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    row-gap: 100px;
+    /* indiferentes */
+    height: 80vh;
+    text-align: center;
+}
+
+section.skills > h1{
+    font-size: 2.5em;
+    text-decoration: underline;
+}
+
+.containerbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 30px;
+
+    /* indiferente */
+    height: 20vh;
+}
+
+.boxskills{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    /* indiferentes */
+    width: 130px;
+    height: 130px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: #202124;
+    color: white;
+}
+.boxskills > p {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.boxskills:hover{
+    background-color: #ffffff;
+    color: #000000;
+    transition: .4s;
+    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.328) ;
+}
+
+
+
+.boxskills5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    /* indiferentes */
+    width: 130px;
+    height: 130px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: #202124;
+    color: white;
+}
+.boxskills5 > p {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.boxskills5:hover{
+    background-color: rgb(242, 159, 6);
+    color: #000000;
+    transition: .4s;
+    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.328) ;
+}
+
+
+
+
+.boxskills3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    /* indiferentes */
+    width: 130px;
+    height: 130px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: #202124;
+    color: #ffffff;
+}
+.boxskills3 > p {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.boxskills3:hover{
+    background-color: #177FBF ;
+    color: #000000;
+    transition: .4s;
+    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.328) ;
+}
+
+
+
+
+.boxskillsj{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    /* indiferentes */
+    width: 130px;
+    height: 130px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: #202124;
+    color: #ffffff;
+}
+.boxskillsj > p {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.boxskillsj:hover{
+    background-color: yellow;
+    color: #000000;
+    transition: .4s;
+    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.328) ;
+}
+
+
+/* sessão4 projects */
+section.projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 150px;
+    height: 130vh;
+}
+section.projects > h1 {
+    font-size: 3em;
+    color: #000000;
+    text-decoration: underline;
+}
+section.projects > .projectsblock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 40vh;
+    gap: 20px;
+    align-content: center;
+}
+
+div.projectsblock > .bloco1{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+
+    /* indiferentes */
+    padding: 50px;
+    width: 150px;
+    height: 150px;
+    background-color: #202124;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    border: 5px solid rgb(0, 0, 0);
+    box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.335);
+}
+
+div.projectsblock > .bloco1:hover{
+    background-color: #ffffff;
+    color: #000000;
+    transition: .5s;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #202124;
+}
+
+footer > h3{
+    color: var(--cor4);
+}
