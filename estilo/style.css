@@ -179,6 +179,7 @@ section.skills{
 section.skills > h1{
     font-size: 2.5em;
     text-decoration: underline;
+    padding-bottom: 40px;
 }
 
 .containerbox{
@@ -311,7 +312,7 @@ section.projects{
     justify-content: center;
     align-items: center;
     row-gap: 150px;
-    height: 130vh;
+    height: 150vh;
 }
 section.projects > h1 {
     font-size: 3em;
@@ -355,7 +356,7 @@ div.projectsblock > .bloco1:hover{
 }
 
 footer{
-    padding: 20px;
+    padding: 50px;
     text-align: center;
     background-color: #202124;
 }
