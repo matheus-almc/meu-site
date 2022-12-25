@@ -123,6 +123,13 @@ section.aboutme{
     border: solid 5px rgb(0, 0, 0);
     border-radius: 5px;
     height: 130vh;
+
+    /* imagem de fundo */
+    background-image: url(/imagens/pexels-max-deroin-249203.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 div.minha-foto{
@@ -264,6 +271,7 @@ section.skills > h1{
     border-radius: 20px;
     background-color: #202124;
     color: #ffffff;
+
 }
 .boxskills3 > p {
     font-size: 1.3em;
