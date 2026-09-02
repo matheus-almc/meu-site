@@ -372,3 +372,8 @@ footer{
 footer > h3{
     color: var(--cor4);
 }
+
+body.tema-claro {
+    background-color: white;
+    color: black;
+}
