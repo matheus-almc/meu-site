@@ -1,5 +1,3 @@
-const botaoTema = document.querySelector('#botao-tema');
+import { iniciarTema } from './theme.js'
 
-botaoTema.addEventListener('click', () => {
-    document.body.classList.toggle('tema-claro');
-});
+iniciarTema()
