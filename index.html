@@ -1,126 +1,288 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus Almeida</title>
-    <link rel="shortcut icon" href="imagens/pinheiro-pq.png" type="image/x-icon">
+
+    <meta
+        name="description"
+        content="Portfolio of Matheus Almeida, Software Engineering student and developer."
+    >
+
+    <title>Matheus Almeida | Portfolio</title>
+
+    <link
+        rel="shortcut icon"
+        href="imagens/pinheiro-pq.png"
+        type="image/x-icon"
+    >
+
     <link rel="stylesheet" href="estilo/style.css">
+
     <script type="module" src="js/main.js"></script>
 </head>
 
-<body >
-    <!-- cabeçalho -->
+<body>
+
+    <!-- Cabeçalho -->
     <header>
-        <nav>
-            <!-- navegação de midia -->
+
+        <nav aria-label="Main navigation">
+
+            <!-- Redes sociais -->
             <ul class="midia">
-                <a href="https://github.com/" target="_blank" rel="external">
-                    <img src="imagens/github-pq.png" alt="logo github">
-                </a>
-                <a href="https://www.linkedin.com/in/matheus-almda/" target="_blank" rel="external">
-                    <img src="imagens/linkedin-pq.png" alt="logo linkedin">
-                </a>
-                <a href="https://www.instagram.com/mathy_ks/" target="_blank" rel="external">
-                    <img src="imagens/instagram-pq.png" alt="logo instagram">
-                </a>
+
+                <li>
+                    <a
+                        href="https://github.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
+                    >
+                        <img
+                            src="imagens/github-pq.png"
+                            alt="GitHub"
+                        >
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://www.linkedin.com/in/matheus-almda/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                    >
+                        <img
+                            src="imagens/linkedin-pq.png"
+                            alt="LinkedIn"
+                        >
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://www.instagram.com/mathy_ks/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                    >
+                        <img
+                            src="imagens/instagram-pq.png"
+                            alt="Instagram"
+                        >
+                    </a>
+                </li>
+
             </ul>
-            <!-- navegação do meu site -->
+
+            <!-- Navegação do site -->
             <ul class="menu">
-                <a href="#projects">{Projects}</a>
-                <a href="#skills">{Skills}</a>
-                <a href="#about me?">{About me?}</a>
-                <a href="#">{Home}</a>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#about">About me</a>
+                </li>
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
             </ul>
+
         </nav>
+
     </header>
 
-    <!-- conteudo principal -->
+
+    <!-- Conteúdo principal -->
     <main>
-        <label class="switch">
-            <input id="botao-tema" type="checkbox">
-             <span class="slider">
-              <div class="star star_1"></div>
-              <div class="star star_2"></div>
-              <div class="star star_3"></div>
+
+        <!-- Controle do tema -->
+        <label
+            class="switch"
+            aria-label="Toggle color theme"
+        >
+            <input
+                id="botao-tema"
+                type="checkbox"
+            >
+
+            <span class="slider">
+
+                <span class="star star_1"></span>
+                <span class="star star_2"></span>
+                <span class="star star_3"></span>
+
             </span>
         </label>
-        <!-- sessão1 home -->
-        <section class="home">
-            <img src="imagens/pinheiro-pq.png" alt="pinheiro">
-            <h1>live and learn with programming...</h1>
-            <img src="imagens/pinheiro-pq.png" alt="">
+
+
+        <!-- Seção Home -->
+        <section
+            id="home"
+            class="home"
+            aria-labelledby="home-title"
+        >
+
+            <img
+                src="imagens/pinheiro-pq.png"
+                alt="Pine tree illustration"
+            >
+
+            <h1 id="home-title">
+                Live and learn with programming...
+            </h1>
+
+            <img
+                src="imagens/pinheiro-pq.png"
+                alt=""
+                aria-hidden="true"
+            >
+
         </section>
-        <!-- sessão2 about me ? -->
-        <section id="about me?" class="aboutme">
+
+
+        <!-- Seção About Me -->
+        <section
+            id="about"
+            class="aboutme"
+            aria-labelledby="about-title"
+        >
+
             <div class="minha-foto">
-                <img class="foto" src="imagens/minha-foto-pq3.jpg" alt="minha-foto">
+
+                <img
+                    class="foto"
+                    src="imagens/minha-foto-pq3.jpg"
+                    alt="Photo of Matheus Almeida"
+                >
+
             </div>
-            <h1>Hello !</h1>
-            <p>my name is Matheus almeida,😄 I'm from Brazil, I'm still very young lol, and I'm starting an incredible
-                journey in programming🌏. I still have a lot to come, to learn, to see, and many more things that I
-                can't even imagine!... I'm very willing to learn new things, and become better with each step I climb in
-                search of what I'm worried about, do more or more at least 3 months that I'm learning to develop in the
-                front-end area, it's a very short time but a time that I preserve and keep with affection in my heart,
-                because all this in general has helped me a lot, and I have many plans that I dream of accomplishing
-                ahead and that's living and learning with programming ❤️.</p>
+
+            <h2 id="about-title">
+                Hello!
+            </h2>
+
             <p>
-                you can help me by following me on social media or sharing my url.
+                My name is Matheus Almeida. I'm from Brazil and I'm starting
+                an incredible journey in programming. There is still a lot
+                for me to learn, discover and experience, and many things
+                that I can't even imagine yet.
             </p>
 
-            <!-- meu nome é Matheus, sou do brasil, sou bem jovem ainda hahaha, e estou iniciando uma jornada incrivel na programação fiz esse site para demonstrar o quanto tenho evoluido, infelizmente isso ainda não é o suficiente mais isso não significa algo ruim, significa que tem muita coisa por vim ainda, muita coisa para conhecer para aprender ver e muito mais coisas que eu nem imagino !... estou muito disposto a aprender coisas novas e me tornar melhor a cada degrau que subo em busca do que preocuro, faz mais ou menos uns 3 meses que estou aprendendo a desenvolver na area de front-end, é muito pouco tempo mas um tempo que eu preservo e guardo com carinho no meu coração , por que tudo isso de um modo geral tem me ajudado muito , e tenho muitos planos que sonho realizar pela frente e é isso vivendo e aprendendo com programação. -->
+            <p>
+                I'm passionate about learning new things and becoming better
+                with every step of my journey. I'm currently studying
+                Software Engineering and developing my skills in programming
+                and web development.
+            </p>
+
+            <p>
+                You can support my journey by following me on social media
+                or sharing my portfolio.
+            </p>
+
         </section>
-        <!-- sessão3 skills -->
-        <section id="skills" class="skills">
-            <h1>{Skills}</h1>
-            <section class="containerbox">
+
+
+        <!-- Seção Skills -->
+        <section
+            id="skills"
+            class="skills"
+            aria-labelledby="skills-title"
+        >
+
+            <h2 id="skills-title">
+                Skills
+            </h2>
+
+            <div class="containerbox">
 
                 <div class="boxskills5">
                     <p>HTML5</p>
                 </div>
+
                 <div class="boxskills3">
                     <p>CSS3</p>
                 </div>
+
                 <div class="boxskillsj">
                     <p>JavaScript</p>
                 </div>
+
                 <div class="boxskills">
-                    <p> ? </p>
-                </div>
-                <div class="boxskills">
-                    <p> ? </p>
-                </div>
-                <div class="boxskills">
-                    <p> ? </p>
+                    <p>?</p>
                 </div>
 
-            </section>
+                <div class="boxskills">
+                    <p>?</p>
+                </div>
+
+                <div class="boxskills">
+                    <p>?</p>
+                </div>
+
+            </div>
+
         </section>
-        <!-- sessão4 projects -->
-        <section id="projects" class="projects">
-            <h1>{projects}</h1>
+
+
+        <!-- Seção Projects -->
+        <section
+            id="projects"
+            class="projects"
+            aria-labelledby="projects-title"
+        >
+
+            <h2 id="projects-title">
+                Projects
+            </h2>
+
             <div class="projectsblock">
-                <div class="bloco1">
-                    <h1>PROJECT 1 COMING SOON</h1>
-                </div>
-                <div class="bloco1">
-                    <h1>PROJECT 2 COMING SOON</h1>
-                </div>
-                <div class="bloco1">
-                    <h1>PROJECT 3 COMING SOON</h1>
-                </div>
-                <div class="bloco1">
-                    <h1>PROJECT 4 COMING SOON</h1>
-                </div>
+
+                <article class="bloco1">
+                    <h3>Project 1 — Coming Soon</h3>
+                </article>
+
+                <article class="bloco1">
+                    <h3>Project 2 — Coming Soon</h3>
+                </article>
+
+                <article class="bloco1">
+                    <h3>Project 3 — Coming Soon</h3>
+                </article>
+
+                <article class="bloco1">
+                    <h3>Project 4 — Coming Soon</h3>
+                </article>
+
+            </div>
+
         </section>
-        </div>
+
     </main>
-    <!-- rodapé -->
+
+
+    <!-- Rodapé -->
     <footer>
-        <h3>©️ 2022 Matheus Almeida </h3>
+
+        <p>
+            © 2026 Matheus Almeida
+        </p>
+
     </footer>
+
 </body>
 
 </html>
+```

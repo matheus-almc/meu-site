@@ -6,14 +6,17 @@
     --cor-fundo: #7d7d7d;
     --cor-texto: #000000;
     --cor-card: #202124;
-    --cor-texto-white: #ffffff; 
+    --cor-texto-white: #ffffff;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-
-*{
-    margin: 0px;
-    padding: 0px;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -26,50 +29,62 @@ body.tema-claro {
     --cor-fundo: #ffffff;
     --cor-texto: #000000;
     --cor-card: #eeeeee;
-     --cor-texto-white: #000000;
+    --cor-texto-white: #000000;
 }
 
-/* cabeçalho */
-header{
-    border: solid 3px  black;
+/* ==============================
+   CABEÇALHO
+   ============================== */
+
+header {
+    border: 3px solid black;
     border-radius: 10px;
-    box-shadow: 0px 0px 5px 6px rgba(0, 0, 0, 0.307);
+    box-shadow: 0 0 5px 6px rgba(0, 0, 0, 0.307);
 }
 
-/* navegação */
-nav{
-    height: 12vh;
+/* Navegação */
+nav {
+    min-height: 12vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
-/* navegação de midia */
-nav > .midia{
+nav ul {
+    list-style: none;
+}
+
+/* Redes sociais */
+nav > .midia {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
     width: 50%;
-
 }
 
-nav > .midia > a {
+nav > .midia > li > a {
+    display: block;
     color: var(--cor-texto-white);
-    padding:10px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-nav > .midia > a:hover{
+nav > .midia > li > a:hover {
     background-color: #ffffff;
     color: #000000;
-    border-radius: 10px;
     transition: 0.3s;
-    box-shadow: 0px 0px 7px 6px rgba(0, 0, 0, 0.338);
+    box-shadow: 0 0 7px 6px rgba(0, 0, 0, 0.338);
 }
 
-/* navegação de site */
-nav > .menu{
+nav > .midia img {
+    display: block;
+}
+
+/* Navegação do site */
+nav > .menu {
     display: flex;
     flex-flow: row-reverse nowrap;
     justify-content: center;
@@ -79,7 +94,8 @@ nav > .menu{
     width: 50%;
 }
 
-nav > .menu > a {
+nav > .menu > li > a {
+    display: block;
     text-decoration: none;
     font-size: 19px;
     color: #000000;
@@ -88,297 +104,28 @@ nav > .menu > a {
     font-weight: bold;
 }
 
-nav > .menu > a:hover {
+nav > .menu > li > a:hover {
     background-color: #ffffff;
-    transition: .3s;
+    transition: 0.3s;
     color: #000000;
     text-decoration: underline;
-    box-shadow: 0px 0px 7px 6px rgba(0, 0, 0, 0.341);
+    box-shadow: 0 0 7px 6px rgba(0, 0, 0, 0.341);
 }
 
-/* conteudo principal */
-main{
+/* ==============================
+   CONTEÚDO PRINCIPAL
+   ============================== */
+
+main {
     margin: auto;
     max-width: 1700px;
     border-radius: 20px;
 }
 
-/* sessão1 home */
-section.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
+/* ==============================
+   THEME SWITCH
+   ============================== */
 
-    /* indiferentes */
-    height: 100vh;
-}
-
-section.home > h1 {
-    font-size: 1.8em;
-}
-
-
-/* sessão2 about me? */
-section.aboutme{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 10px;
-
-    /* indiferente */
-    background-color:  var(--cor-card);
-    box-shadow: 0px 0px 8px 8px #0000004b;
-    border: solid 5px rgb(0, 0, 0);
-    border-radius: 5px;
-    height: 130vh;
-
-}
-
-
-div.minha-foto{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    /* indiferentes */
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: solid 8px black;
-    margin-top: 10px ;
-    background-color: #000000;
-    box-shadow: 0px 0px 9px 9px rgba(0, 0, 0, 0.404);
-}
-.foto{
-    max-width: 290px;
-    max-height: 290px;
-    border-radius: 50%;
-}
-
-section.aboutme > h1{
-    color: var(--cor-texto-white);
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 2em;
-}
-
-section.aboutme > p {
-    color: var(--cor-texto-white);
-    text-align: center;
-    font-size: 13px;
-    height: 500px;
-    max-width: 1000px;
-    min-width: 320px;
-    line-height: 29px;
-}
-
-
-/* sessão3 skills */
-section.skills{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: space-around;
-    row-gap: 100px;
-    /* indiferentes */
-    height: 80vh;
-    text-align: center;
-}
-
-section.skills > h1{
-    font-size: 2.5em;
-    text-decoration: underline;
-    padding-bottom: 40px;
-}
-
-.containerbox{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    column-gap: 20px;
-    row-gap: 40px;
-
-    /* indiferente */
-    height: 20vh;
-}
-
-.boxskills{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    /* indiferentes */
-    width: 120px;
-    height: 120px;
-    border: 3px solid black;
-    border-radius: 20px;
-    background-color: var(--cor-card);
-    color: var(--cor-texto-white);
-}
-.boxskills > p {
-    font-size: 1.3em;
-    font-weight: bold;
-}
-.boxskills:hover{
-    background-color: #ffffff;
-    color: #000000;
-    transition: .4s;
-    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.328) ;
-}
-
-
-
-.boxskills5{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    /* indiferentes */
-    width: 120px;
-    height: 120px;
-    border: 3px solid black;
-    border-radius: 20px;
-    background-color: var(--cor-card);
-    color: var(--cor-texto-white);
-}
-.boxskills5 > p {
-    font-size: 1.3em;
-    font-weight: bold;
-}
-.boxskills5:hover{
-    background-color: rgb(242, 159, 6);
-    color: var(--cor-texto);
-    transition: .4s;
-    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.328) ;
-}
-
-
-
-
-.boxskills3{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    /* indiferentes */
-    width: 120px;
-    height: 120px;
-    border: 3px solid black;
-    border-radius: 20px;
-    background-color: var(--cor-card);
-    color: var(--cor-texto-white);
-
-}
-.boxskills3 > p {
-    font-size: 1.3em;
-    font-weight: bold;
-}
-.boxskills3:hover{
-    background-color: #177FBF ;
-    color: #000000;
-    transition: .4s;
-    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.328) ;
-}
-
-
-
-
-.boxskillsj{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    /* indiferentes */
-    width: 120px;
-    height: 120px;
-    border: 3px solid black;
-    border-radius: 20px;
-    background-color: var(--cor-card);
-    color: var(--cor-texto-white);
-}
-.boxskillsj > p {
-    font-size: 1.3em;
-    font-weight: bold;
-}
-.boxskillsj:hover{
-    background-color: yellow;
-    color: var(--cor-texto);
-    transition: .4s;
-    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.328) ;
-}
-
-
-/* sessão4 projects */
-section.projects{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 150px;
-    height: 150vh;
-}
-section.projects > h1 {
-    font-size: 3em;
-    color: var(--cor-texto);
-    text-decoration: underline;
-
-}
-section.projects > .projectsblock{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 40vh;
-    gap: 20px;
-    align-content: center;
-}
-
-div.projectsblock > .bloco1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    row-gap: 20px;
-
-    /* indiferentes */
-    width: 200px;
-    height: 200px;
-    background-color: var(--cor-card);
-    color: var(--cor-texto-white);
-    text-align: center;
-    border-radius: 10px;
-    border: 5px solid rgb(0, 0, 0);
-    box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.335);
-}
-
-div.projectsblock > .bloco1:hover{
-    background-color: #ffffff;
-    color: #000000;
-    transition: .5s;
-}
-
-footer{
-    padding: 50px;
-    text-align: center;
-    background-color: var(--cor-card);
-}
-
-footer > h3{
-    color: var(--cor-texto);
-}
-
-
-/* Theme Switch imterruptor de tema*/
 .switch {
     font-size: 17px;
     position: relative;
@@ -387,18 +134,16 @@ footer > h3{
     height: 2.2em;
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-     transform: translate(-90px, 20px);
+    transform: translate(-90px, 20px);
+    z-index: 10;
 }
 
-/* Esconde o checkbox padrão */
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-/* Interruptor */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -412,7 +157,6 @@ footer > h3{
     overflow: hidden;
 }
 
-/* Bolinha */
 .slider:before {
     position: absolute;
     content: "";
@@ -423,21 +167,18 @@ footer > h3{
     bottom: 0.5em;
     transition: 0.4s;
     transition-timing-function: cubic-bezier(0.81, -0.04, 0.38, 1.5);
-    box-shadow: inset 8px -4px 0px 0px #fff;
+    box-shadow: inset 8px -4px 0 0 #fff;
 }
 
-/* Quando ligado */
 .switch input:checked + .slider {
     background-color: #00a6ff;
 }
 
-/* Move a bolinha */
 .switch input:checked + .slider:before {
     transform: translateX(1.8em);
-    box-shadow: inset 15px -4px 0px 15px #ffcf48;
+    box-shadow: inset 15px -4px 0 15px #ffcf48;
 }
 
-/* Estrelas */
 .star {
     background-color: #fff;
     border-radius: 50%;
@@ -462,7 +203,366 @@ footer > h3{
     top: 0.9em;
 }
 
-/* Esconde as estrelas quando ligado */
 .switch input:checked ~ .slider .star {
     opacity: 0;
+}
+
+/* ==============================
+   HOME
+   ============================== */
+
+section.home {
+    min-height: 100vh;
+    padding: 80px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    text-align: center;
+}
+
+section.home > h1 {
+    font-size: 1.8em;
+}
+
+section.home > img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==============================
+   ABOUT ME
+   ============================== */
+
+section.aboutme {
+    min-height: 100vh;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    background-color: var(--cor-card);
+    box-shadow: 0 0 8px 8px #0000004b;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+div.minha-foto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    max-width: 80vw;
+    max-height: 80vw;
+    border-radius: 50%;
+    border: 8px solid black;
+    margin-top: 10px;
+    background-color: #000000;
+    box-shadow: 0 0 9px 9px rgba(0, 0, 0, 0.404);
+}
+
+.foto {
+    width: 100%;
+    height: 100%;
+    max-width: 290px;
+    max-height: 290px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+section.aboutme > h2 {
+    color: var(--cor-texto-white);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+section.aboutme > p {
+    color: var(--cor-texto-white);
+    text-align: center;
+    font-size: 13px;
+    max-width: 1000px;
+    min-width: 0;
+    line-height: 29px;
+}
+
+/* ==============================
+   SKILLS
+   ============================== */
+
+section.skills {
+    min-height: 80vh;
+    padding: 80px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 60px;
+    text-align: center;
+}
+
+section.skills > h2 {
+    font-size: 2.5em;
+    text-decoration: underline;
+    padding-bottom: 20px;
+}
+
+.containerbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 20px;
+    width: 100%;
+}
+
+.boxskills,
+.boxskills5,
+.boxskills3,
+.boxskillsj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: var(--cor-card);
+    color: var(--cor-texto-white);
+}
+
+.boxskills > p,
+.boxskills5 > p,
+.boxskills3 > p,
+.boxskillsj > p {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.boxskills:hover,
+.boxskills5:hover,
+.boxskills3:hover,
+.boxskillsj:hover {
+    transition: 0.4s;
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.328);
+}
+
+.boxskills:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.boxskills5:hover {
+    background-color: rgb(242, 159, 6);
+    color: var(--cor-texto);
+}
+
+.boxskills3:hover {
+    background-color: #177FBF;
+    color: #000000;
+}
+
+.boxskillsj:hover {
+    background-color: yellow;
+    color: var(--cor-texto);
+}
+
+/* ==============================
+   PROJECTS
+   ============================== */
+
+section.projects {
+    min-height: 100vh;
+    padding: 80px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 80px;
+}
+
+section.projects > h2 {
+    font-size: 3em;
+    color: var(--cor-texto);
+    text-decoration: underline;
+    text-align: center;
+}
+
+section.projects > .projectsblock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.projectsblock > .bloco1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    row-gap: 20px;
+    width: 200px;
+    min-height: 200px;
+    background-color: var(--cor-card);
+    color: var(--cor-texto-white);
+    text-align: center;
+    border-radius: 10px;
+    border: 5px solid rgb(0, 0, 0);
+    box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.335);
+}
+
+.projectsblock > .bloco1:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.5s;
+}
+
+.projectsblock h3 {
+    font-size: 1rem;
+    padding: 10px;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    padding: 50px;
+    text-align: center;
+    background-color: var(--cor-card);
+}
+
+footer > p {
+    color: var(--cor-texto);
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav > .midia,
+    nav > .menu {
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav > .menu {
+        column-gap: 10px;
+    }
+
+    nav > .menu > li > a {
+        font-size: 15px;
+    }
+
+    section.home {
+        min-height: 80vh;
+        padding: 60px 20px;
+    }
+
+    section.home > h1 {
+        font-size: 1.3em;
+    }
+
+    section.home > img {
+        max-width: 70px;
+    }
+
+    section.aboutme {
+        padding: 50px 20px;
+    }
+
+    section.aboutme > p {
+        font-size: 12px;
+        line-height: 24px;
+    }
+
+    section.skills,
+    section.projects {
+        padding: 70px 20px;
+    }
+
+    section.skills > h2,
+    section.projects > h2 {
+        font-size: 2em;
+    }
+
+    .switch {
+        transform: translate(10px, 10px);
+    }
+}
+
+@media (max-width: 480px) {
+
+    nav > .menu {
+        gap: 5px;
+    }
+
+    nav > .menu > li > a {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    section.home {
+        gap: 10px;
+    }
+
+    section.home > h1 {
+        font-size: 1.05em;
+    }
+
+    section.home > img {
+        max-width: 45px;
+    }
+
+    div.minha-foto {
+        width: 240px;
+        height: 240px;
+    }
+
+    section.aboutme > h2 {
+        font-size: 1.6em;
+    }
+
+    section.skills > h2,
+    section.projects > h2 {
+        font-size: 1.7em;
+    }
+
+    .boxskills,
+    .boxskills5,
+    .boxskills3,
+    .boxskillsj {
+        width: 105px;
+        height: 105px;
+    }
+
+    .boxskills > p,
+    .boxskills5 > p,
+    .boxskills3 > p,
+    .boxskillsj > p {
+        font-size: 1em;
+    }
+
+    .projectsblock > .bloco1 {
+        width: min(200px, 90vw);
+    }
+
+    footer {
+        padding: 30px 20px;
+    }
 }
