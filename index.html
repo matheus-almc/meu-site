@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,13 +25,48 @@
 
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
+<header class="site-header">
 
-        <nav aria-label="Main navigation">
+    <nav class="navbar">
+
+        <!-- Logo -->
+        <a href="#home" class="logo">
+            <img
+                src="imagens/pinheiro-pq.png"
+                alt=""
+            >
+
+            <span>MATHEUS.DEV</span>
+        </a>
+
+
+        <!-- Menu principal -->
+        <ul class="menu">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+        </ul>
+
+
+        <!-- Ações do Header -->
+        <div class="header-actions">
 
             <!-- Redes sociais -->
-            <ul class="midia">
+            <ul class="social-links">
 
                 <li>
                     <a
@@ -43,7 +77,7 @@
                     >
                         <img
                             src="imagens/github-pq.png"
-                            alt="GitHub"
+                            alt=""
                         >
                     </a>
                 </li>
@@ -57,7 +91,7 @@
                     >
                         <img
                             src="imagens/linkedin-pq.png"
-                            alt="LinkedIn"
+                            alt=""
                         >
                     </a>
                 </li>
@@ -71,37 +105,38 @@
                     >
                         <img
                             src="imagens/instagram-pq.png"
-                            alt="Instagram"
+                            alt=""
                         >
                     </a>
                 </li>
 
             </ul>
 
-            <!-- Navegação do site -->
-            <ul class="menu">
 
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
+            <!-- Botão de tema -->
+            <label
+                class="switch"
+                aria-label="Toggle color theme"
+            >
+                <input
+                    id="botao-tema"
+                    type="checkbox"
+                >
 
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
+                <span class="slider">
 
-                <li>
-                    <a href="#about">About me</a>
-                </li>
+                    <span class="star star_1"></span>
+                    <span class="star star_2"></span>
+                    <span class="star star_3"></span>
 
-                <li>
-                    <a href="#home">Home</a>
-                </li>
+                </span>
+            </label>
 
-            </ul>
+        </div>
 
-        </nav>
+    </nav>
 
-    </header>
+</header>
 
 
     <!-- Conteúdo principal -->
