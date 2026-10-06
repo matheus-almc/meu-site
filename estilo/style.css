@@ -32,84 +32,175 @@ body.tema-claro {
     --cor-texto-white: #000000;
 }
 
-/* ==============================
-   CABEÇALHO
-   ============================== */
+/* =========================================================
+   HEADER
+   ========================================================= */
 
-header {
-    border: 3px solid black;
-    border-radius: 10px;
-    box-shadow: 0 0 5px 6px rgba(0, 0, 0, 0.307);
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    padding: 15px 30px;
+
+    background-color: var(--cor-fundo);
 }
 
-/* Navegação */
-nav {
-    min-height: 12vh;
+
+/* Container principal da navegação */
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 70px;
+
+    margin: 0 auto;
+    padding: 12px 20px;
+
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
+    border-radius: 18px;
+
+    background-color: var(--cor-caixa);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-nav ul {
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: inherit;
+    text-decoration: none;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: rotate(-5deg) scale(1.08);
+}
+
+/* =========================================================
+   MENU PRINCIPAL
+   ========================================================= */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 0;
+    padding: 0;
+
     list-style: none;
 }
 
-/* Redes sociais */
-nav > .midia {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: nowrap;
-    width: 50%;
+.menu li {
+    margin: 0;
+    padding: 0;
 }
 
-nav > .midia > li > a {
-    display: block;
-    color: var(--cor-texto-white);
-    padding: 10px;
-    border-radius: 10px;
-}
+.menu a {
+    position: relative;
 
-nav > .midia > li > a:hover {
-    background-color: #ffffff;
-    color: #000000;
-    transition: 0.3s;
-    box-shadow: 0 0 7px 6px rgba(0, 0, 0, 0.338);
-}
+    display: inline-block;
 
-nav > .midia img {
-    display: block;
-}
+    padding: 8px 12px;
 
-/* Navegação do site */
-nav > .menu {
-    display: flex;
-    flex-flow: row-reverse nowrap;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: 30px;
-    width: 50%;
-}
-
-nav > .menu > li > a {
-    display: block;
+    color: inherit;
     text-decoration: none;
-    font-size: 19px;
-    color: #000000;
-    padding: 9px;
-    border-radius: 5px;
-    font-weight: bold;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    border-radius: 10px;
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
 }
 
-nav > .menu > li > a:hover {
-    background-color: #ffffff;
-    transition: 0.3s;
-    color: #000000;
-    text-decoration: underline;
-    box-shadow: 0 0 7px 6px rgba(0, 0, 0, 0.341);
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   AÇÕES DO HEADER
+   ========================================================= */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* Redes sociais */
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.social-links li {
+    margin: 0;
+    padding: 0;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.social-links img {
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px) scale(1.05);
+
+    background-color: rgba(255, 255, 255, 0.12);
 }
 
 /* ==============================
